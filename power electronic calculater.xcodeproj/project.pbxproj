@@ -24,6 +24,7 @@
 		1ABE25961FD6B0D200F8710D /* 3_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE25951FD6B0D100F8710D /* 3_3.png */; };
 		1ABE25991FD6B15200F8710D /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE25981FD6B15200F8710D /* ViewController1.m */; };
 		1ABE259C1FD6B17800F8710D /* ViewController1_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE259B1FD6B17800F8710D /* ViewController1_1.m */; };
+		1ABE259F1FD6B68600F8710D /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE259E1FD6B68600F8710D /* ViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		1ABE25981FD6B15200F8710D /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		1ABE259A1FD6B17800F8710D /* ViewController1_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1_1.h; sourceTree = "<group>"; };
 		1ABE259B1FD6B17800F8710D /* ViewController1_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1_1.m; sourceTree = "<group>"; };
+		1ABE259D1FD6B68600F8710D /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		1ABE259E1FD6B68600F8710D /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				1ABE25981FD6B15200F8710D /* ViewController1.m */,
 				1ABE259A1FD6B17800F8710D /* ViewController1_1.h */,
 				1ABE259B1FD6B17800F8710D /* ViewController1_1.m */,
+				1ABE259D1FD6B68600F8710D /* ViewController2.h */,
+				1ABE259E1FD6B68600F8710D /* ViewController2.m */,
 				1ABE24D61FD6A8EF00F8710D /* ViewController.h */,
 				1ABE24D71FD6A8EF00F8710D /* ViewController.m */,
 				1ABE24D91FD6A8EF00F8710D /* Main.storyboard */,
@@ -310,6 +315,7 @@
 				1ABE25991FD6B15200F8710D /* ViewController1.m in Sources */,
 				1ABE24E31FD6A8EF00F8710D /* main.m in Sources */,
 				1ABE259C1FD6B17800F8710D /* ViewController1_1.m in Sources */,
+				1ABE259F1FD6B68600F8710D /* ViewController2.m in Sources */,
 				1ABE258C1FD6AF4E00F8710D /* TableViewController3.m in Sources */,
 				1ABE24D51FD6A8EF00F8710D /* AppDelegate.m in Sources */,
 			);
