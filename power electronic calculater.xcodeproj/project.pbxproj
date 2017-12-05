@@ -15,6 +15,15 @@
 		1ABE24E31FD6A8EF00F8710D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE24E21FD6A8EF00F8710D /* main.m */; };
 		1ABE24ED1FD6A8EF00F8710D /* power_electronic_calculaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE24EC1FD6A8EF00F8710D /* power_electronic_calculaterTests.m */; };
 		1ABE24F81FD6A8EF00F8710D /* power_electronic_calculaterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE24F71FD6A8EF00F8710D /* power_electronic_calculaterUITests.m */; };
+		1ABE25891FD6ADDB00F8710D /* TableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE25881FD6ADDB00F8710D /* TableViewController1.m */; };
+		1ABE258C1FD6AF4E00F8710D /* TableViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE258B1FD6AF4E00F8710D /* TableViewController3.m */; };
+		1ABE258E1FD6B0AD00F8710D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE258D1FD6B0AC00F8710D /* 1.png */; };
+		1ABE25901FD6B0B900F8710D /* 1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE258F1FD6B0B900F8710D /* 1_1.png */; };
+		1ABE25921FD6B0C000F8710D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE25911FD6B0BF00F8710D /* 2.png */; };
+		1ABE25941FD6B0CA00F8710D /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE25931FD6B0CA00F8710D /* 3.png */; };
+		1ABE25961FD6B0D200F8710D /* 3_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE25951FD6B0D100F8710D /* 3_3.png */; };
+		1ABE25991FD6B15200F8710D /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE25981FD6B15200F8710D /* ViewController1.m */; };
+		1ABE259C1FD6B17800F8710D /* ViewController1_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE259B1FD6B17800F8710D /* ViewController1_1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,19 @@
 		1ABE24F31FD6A8EF00F8710D /* power electronic calculaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "power electronic calculaterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABE24F71FD6A8EF00F8710D /* power_electronic_calculaterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = power_electronic_calculaterUITests.m; sourceTree = "<group>"; };
 		1ABE24F91FD6A8EF00F8710D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ABE25871FD6ADDB00F8710D /* TableViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController1.h; sourceTree = "<group>"; };
+		1ABE25881FD6ADDB00F8710D /* TableViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController1.m; sourceTree = "<group>"; };
+		1ABE258A1FD6AF4E00F8710D /* TableViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController3.h; sourceTree = "<group>"; };
+		1ABE258B1FD6AF4E00F8710D /* TableViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController3.m; sourceTree = "<group>"; };
+		1ABE258D1FD6B0AC00F8710D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = imag/1.png; sourceTree = "<group>"; };
+		1ABE258F1FD6B0B900F8710D /* 1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1_1.png; path = imag/1_1.png; sourceTree = "<group>"; };
+		1ABE25911FD6B0BF00F8710D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = imag/2.png; sourceTree = "<group>"; };
+		1ABE25931FD6B0CA00F8710D /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = imag/3.png; sourceTree = "<group>"; };
+		1ABE25951FD6B0D100F8710D /* 3_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3_3.png; path = imag/3_3.png; sourceTree = "<group>"; };
+		1ABE25971FD6B15200F8710D /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		1ABE25981FD6B15200F8710D /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		1ABE259A1FD6B17800F8710D /* ViewController1_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1_1.h; sourceTree = "<group>"; };
+		1ABE259B1FD6B17800F8710D /* ViewController1_1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1_1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +125,14 @@
 			children = (
 				1ABE24D31FD6A8EF00F8710D /* AppDelegate.h */,
 				1ABE24D41FD6A8EF00F8710D /* AppDelegate.m */,
+				1ABE25871FD6ADDB00F8710D /* TableViewController1.h */,
+				1ABE25881FD6ADDB00F8710D /* TableViewController1.m */,
+				1ABE258A1FD6AF4E00F8710D /* TableViewController3.h */,
+				1ABE258B1FD6AF4E00F8710D /* TableViewController3.m */,
+				1ABE25971FD6B15200F8710D /* ViewController1.h */,
+				1ABE25981FD6B15200F8710D /* ViewController1.m */,
+				1ABE259A1FD6B17800F8710D /* ViewController1_1.h */,
+				1ABE259B1FD6B17800F8710D /* ViewController1_1.m */,
 				1ABE24D61FD6A8EF00F8710D /* ViewController.h */,
 				1ABE24D71FD6A8EF00F8710D /* ViewController.m */,
 				1ABE24D91FD6A8EF00F8710D /* Main.storyboard */,
@@ -110,6 +140,11 @@
 				1ABE24DE1FD6A8EF00F8710D /* LaunchScreen.storyboard */,
 				1ABE24E11FD6A8EF00F8710D /* Info.plist */,
 				1ABE24E21FD6A8EF00F8710D /* main.m */,
+				1ABE258D1FD6B0AC00F8710D /* 1.png */,
+				1ABE258F1FD6B0B900F8710D /* 1_1.png */,
+				1ABE25911FD6B0BF00F8710D /* 2.png */,
+				1ABE25931FD6B0CA00F8710D /* 3.png */,
+				1ABE25951FD6B0D100F8710D /* 3_3.png */,
 			);
 			path = "power electronic calculater";
 			sourceTree = "<group>";
@@ -238,9 +273,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABE25921FD6B0C000F8710D /* 2.png in Resources */,
 				1ABE24E01FD6A8EF00F8710D /* LaunchScreen.storyboard in Resources */,
+				1ABE25901FD6B0B900F8710D /* 1_1.png in Resources */,
+				1ABE258E1FD6B0AD00F8710D /* 1.png in Resources */,
 				1ABE24DD1FD6A8EF00F8710D /* Assets.xcassets in Resources */,
+				1ABE25941FD6B0CA00F8710D /* 3.png in Resources */,
 				1ABE24DB1FD6A8EF00F8710D /* Main.storyboard in Resources */,
+				1ABE25961FD6B0D200F8710D /* 3_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ABE24D81FD6A8EF00F8710D /* ViewController.m in Sources */,
+				1ABE25891FD6ADDB00F8710D /* TableViewController1.m in Sources */,
+				1ABE25991FD6B15200F8710D /* ViewController1.m in Sources */,
 				1ABE24E31FD6A8EF00F8710D /* main.m in Sources */,
+				1ABE259C1FD6B17800F8710D /* ViewController1_1.m in Sources */,
+				1ABE258C1FD6AF4E00F8710D /* TableViewController3.m in Sources */,
 				1ABE24D51FD6A8EF00F8710D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
