@@ -25,11 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.inputvoltage.keyboardType = UIKeyboardTypeNumberPad;
-    self.outputvoltage.keyboardType = UIKeyboardTypeNumberPad;
-    self.resistance.keyboardType = UIKeyboardTypeNumberPad;
-    
-    self.inputvoltage.delegate = self.outputvoltage.delegate = self.resistance.delegate = self;
     
     // Do any additional setup after loading the view.
     
