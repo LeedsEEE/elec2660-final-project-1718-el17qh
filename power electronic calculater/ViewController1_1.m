@@ -9,6 +9,13 @@
 #import "ViewController1_1.h"
 
 @interface ViewController1_1 ()
+@property (weak, nonatomic) IBOutlet UITextField *inputvoltage;
+@property (weak, nonatomic) IBOutlet UITextField *outputvoltage;
+@property (weak, nonatomic) IBOutlet UITextField *resistance;
+@property (weak, nonatomic) IBOutlet UILabel *outputcurrent;
+@property (weak, nonatomic) IBOutlet UILabel *dutyratio;
+@property (weak, nonatomic) IBOutlet UILabel *inputcurrent;
+- (IBAction)calculate:(id)sender;
 
 @end
 
@@ -34,4 +41,30 @@
 }
 */
 
+- (IBAction)background:(id)sender {
+    NSLog(@"Background Pressed");
+    if([self.inputvoltage isFirstResponder]){
+        [self.inputvoltage resignFirstResponder];
+    }
+    if([self.outputvoltage isFirstResponder]){
+        [self.outputvoltage resignFirstResponder];
+    }
+    if([self.resistance isFirstResponder]){
+        [self.resistance resignFirstResponder];
+    }
+    
+}
+- (IBAction)calculate:(id)sender {
+    float value1 = [self.inputvoltage.text floatValue];
+    float value2 = [self.outputvoltage.text floatValue];
+    float value3 = [self.resistance.text floatValue];
+    
+    float resul1 = value2 / value3;
+    float resul2 = value2 / value1;
+    float resul3 = resul1 * resul2;
+    
+    self.outputcurrent.text = [NSString stringWithFormat:@"%.2f", resul1];
+    self.dutyratio.text = [NSString stringWithFormat:@"%.2f", resul2];
+    self.inputcurrent.text = [NSString stringWithFormat:@"%.2f", resul3];
+}
 @end

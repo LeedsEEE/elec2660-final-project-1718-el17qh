@@ -10,4 +10,8 @@
 
 @interface ViewController1 : UIViewController
 
+- (IBAction)background:(id)sender;
+
+
+
 @end

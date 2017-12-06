@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController1_1 : UIViewController
+- (IBAction)background:(id)sender;
 
 @end
