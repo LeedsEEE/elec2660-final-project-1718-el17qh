@@ -9,6 +9,13 @@
 #import "ViewController2.h"
 
 @interface ViewController2 ()
+@property (weak, nonatomic) IBOutlet UITextField *inputvoltage;
+@property (weak, nonatomic) IBOutlet UITextField *activepower;
+@property (weak, nonatomic) IBOutlet UITextField *powerfactor;
+@property (weak, nonatomic) IBOutlet UILabel *apparentpower;
+@property (weak, nonatomic) IBOutlet UILabel *current;
+- (IBAction)calculate:(id)sender;
+
 
 @end
 
@@ -24,14 +31,43 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(bool)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
-*/
 
+
+- (IBAction)calculate:(id)sender {
+    float value1 = [self.inputvoltage.text floatValue];
+    float value2 = [self.activepower.text floatValue];
+    float value3 = [self.powerfactor.text floatValue];
+    
+    float resul1 = value2 / value3;
+    float resul2 = resul1 / value1;
+    
+    self.apparentpower.text = [NSString stringWithFormat:@"%.2f", resul1];
+    self.current.text = [NSString stringWithFormat:@"%.2f", resul2];
+}
+
+- (IBAction)background:(id)sender {
+    if([self.inputvoltage isFirstResponder]){
+    [self.inputvoltage resignFirstResponder];
+}
+    if([self.activepower isFirstResponder]){
+        [self.activepower resignFirstResponder];
+    }
+    if([self.powerfactor isFirstResponder]){
+        [self.powerfactor resignFirstResponder];
+    }
+}
+/*
+  #pragma mark - Navigation
+  
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  // Get the new view controller using [segue destinationViewController].
+  // Pass the selected object to the new view controller.
+  }
+  */
 @end

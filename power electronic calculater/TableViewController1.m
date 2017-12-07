@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Step - down/up";
+    self.title = @"DC-DC";
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"TableViewController1"];
     
