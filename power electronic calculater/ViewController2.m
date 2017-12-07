@@ -39,18 +39,22 @@
 }
 
 
-- (IBAction)calculate:(id)sender {
+- (IBAction)calculate:(id)sender {//store the calculation in the view controller
+    //temporary store the input values form text field
     float value1 = [self.inputvoltage.text floatValue];
     float value2 = [self.activepower.text floatValue];
     float value3 = [self.powerfactor.text floatValue];
     
+    //calculations
     float resul1 = value2 / value3;
     float resul2 = resul1 / value1;
     
+    //output the results with labels
     self.apparentpower.text = [NSString stringWithFormat:@"%.2f", resul1];
     self.current.text = [NSString stringWithFormat:@"%.2f", resul2];
 }
 
+//let uesrs press the background to return the keyboard
 - (IBAction)background:(id)sender {
     if([self.inputvoltage isFirstResponder]){
     [self.inputvoltage resignFirstResponder];

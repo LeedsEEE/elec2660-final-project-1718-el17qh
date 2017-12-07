@@ -41,6 +41,7 @@
 }
 */
 
+//let uesrs press the background to return the keyboard
 - (IBAction)background:(id)sender {
     
     if([self.inputvoltage isFirstResponder]){
@@ -60,15 +61,34 @@
     return YES;
 }
 
-- (IBAction)calculate:(id)sender {
+- (IBAction)calculate:(id)sender {//store the calculation in the view controller
+    //temporary store the input values form text field
     float value1 = [self.inputvoltage.text floatValue];
     float value2 = [self.outputvoltage.text floatValue];
     float value3 = [self.resistance.text floatValue];
     
+    //From 71th line to 85th line was referenced from https://developer.apple.com/search/?q=UIalert.
+    if (value1>value2) {
+        UIAlertController *alertController = [UIAlertController
+                                              alertControllerWithTitle:@"ERROR!"
+                                              message: @"The outputvoltage must lager than inputvoltage"
+                                              preferredStyle:UIAlertControllerStyleAlert]; //sets the alert message
+        
+        UIAlertAction *okayAction = [UIAlertAction
+                                     actionWithTitle:@"confirm"
+                                     style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction *action) {
+                                         NSLog(@"confirm");
+                                     }]; //sets the style of the action the user needs to take
+        [alertController addAction:okayAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    //calculations
     float resul1 = value2 / value3;
     float resul2 = 1-(value1/value2);
     float resul3 = resul1/(1-resul2);
     
+    //output the results with labels
     self.outputcurrent.text = [NSString stringWithFormat:@"%.2f", resul1];
     self.dutyratio.text = [NSString stringWithFormat:@"%.2f", resul2];
     self.inputcurrent.text = [NSString stringWithFormat:@"%.2f", resul3];

@@ -9,6 +9,7 @@
 #import "TableViewController1.h"
 #import "ViewController1.h"
 #import "ViewController1_1.h"
+//The 13th line was referenced from http://www.jianshu.com/p/4486810b43c1 and https://developer.apple.com/documentation/uikit/uistoryboard/1616216-storyboardwithname. This line will allow users use the name of View Controller to connect with table view controller.
 #define viewOnSb(identifer)  [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:identifer]
 
 @interface TableViewController1 ()
@@ -20,8 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"DC-DC";
+    self.title = @"DC-DC Converter"; //the title of the table view controller
     
+    //The 27th line was referenced from https://developer.apple.com/documentation/uikit/uitableview/1614888-registerclass.This is a process to register the table view.The reuse identifier for the cell
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"TableViewController1"];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -40,12 +42,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return 1; //only 1 section in the table view
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 2;
+    return 2; //2 situations of DC-DC converter and set 2 lines.
 }
 
 
@@ -54,13 +56,15 @@
     
     // Configure the cell...
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"Step - down";
+        cell.textLabel.text = @"Step - down "; //the name of the first line
         
     }else{
-        cell.textLabel.text = @"Step - up";
+        cell.textLabel.text = @"Step - up"; //the name of the second line
         
     }
-    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+    //The 67th line was referenced from https://developer.apple.com/search/?q=cell:accessorytype.
+    
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator; //type of each line in the table view
     
     return cell;
 }
@@ -70,18 +74,21 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 0) {
-        ViewController1 * vc1 = viewOnSb(@"ViewController1");
-        [self.navigationController pushViewController:vc1 animated:YES];
+        ViewController1 * vc1 = viewOnSb(@"ViewController1");//use the define to name the viewcontroller
+        
+        //The 79th and 82th line was referenced from https://developer.apple.com/documentation/uikit/uinavigationcontroller/1621887-pushviewcontroller
+        
+        [self.navigationController pushViewController:vc1 animated:YES];// link the firt line to the view controller1
     }else{
         ViewController1_1 * vc1_1 = viewOnSb(@"ViewController1_1");
-        [self.navigationController pushViewController:vc1_1 animated:YES];
+        [self.navigationController pushViewController:vc1_1 animated:YES];// link the second line to the view controller1
     }
     
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 150;
+    return 150;// set the high of each line
     
 }
 

@@ -40,6 +40,7 @@
 }
 */
 
+//let uesrs press the background to return the keyboard
 - (IBAction)background:(id)sender {
     if([self.angle isFirstResponder]){
         [self.angle resignFirstResponder];
@@ -51,16 +52,18 @@
         [self.resistance resignFirstResponder];
     }
 }
-- (IBAction)calculate:(id)sender {
+- (IBAction)calculate:(id)sender {//store the calculation in the view controller
+    //temporary store the input values form text field
     float value1 = [self.angle.text floatValue];
     float value2 = [self.supplyvoltage.text floatValue];
     float value3 = [self.resistance.text floatValue];
     
+    //calculations
     float resul3 = (value1/180);
     float resul2 = value2 * 0.45 * (1+cos(resul3*3.14));
     float resul1 = resul2/value3;
     
-    
+    //output the results with labels
     self.outputcurrent.text = [NSString stringWithFormat:@"%.2f", resul1];
     self.outputvoltage.text = [NSString stringWithFormat:@"%.2f", resul2];
 }
