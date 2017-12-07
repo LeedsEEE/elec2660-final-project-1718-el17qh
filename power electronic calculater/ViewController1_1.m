@@ -42,7 +42,7 @@
 */
 
 - (IBAction)background:(id)sender {
-    NSLog(@"Background Pressed");
+    
     if([self.inputvoltage isFirstResponder]){
         [self.inputvoltage resignFirstResponder];
     }
@@ -54,17 +54,28 @@
     }
     
 }
+
+-(bool)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)calculate:(id)sender {
     float value1 = [self.inputvoltage.text floatValue];
     float value2 = [self.outputvoltage.text floatValue];
     float value3 = [self.resistance.text floatValue];
     
     float resul1 = value2 / value3;
-    float resul2 = value2 / value1;
-    float resul3 = resul1 * resul2;
+    float resul2 = 1-(value1/value2);
+    float resul3 = resul1/(1-resul2);
     
     self.outputcurrent.text = [NSString stringWithFormat:@"%.2f", resul1];
     self.dutyratio.text = [NSString stringWithFormat:@"%.2f", resul2];
     self.inputcurrent.text = [NSString stringWithFormat:@"%.2f", resul3];
 }
 @end
+
+
+
+
+

@@ -7,6 +7,9 @@
 //
 
 #import "TableViewController1.h"
+#import "ViewController1.h"
+#import "ViewController1_1.h"
+#define viewOnSb(identifer)  [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:identifer]
 
 @interface TableViewController1 ()
 
@@ -16,6 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Step - down/up";
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"TableViewController1"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,24 +39,53 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return 2;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewController1" forIndexPath:indexPath];
     
     // Configure the cell...
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"Step - down";
+        
+    }else{
+        cell.textLabel.text = @"Step - up";
+        
+    }
+    //    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
-*/
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row == 0) {
+        ViewController1 * vc1 = viewOnSb(@"ViewController1");
+        [self.navigationController pushViewController:vc1 animated:YES];
+    }else{
+        ViewController1_1 * vc1_1 = viewOnSb(@"ViewController1_1");
+        [self.navigationController pushViewController:vc1_1 animated:YES];
+    }
+    
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 150;
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.
