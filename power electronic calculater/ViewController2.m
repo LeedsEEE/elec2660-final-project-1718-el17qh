@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"AC power";
     // Do any additional setup after loading the view.
 }
 

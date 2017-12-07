@@ -60,7 +60,6 @@
         cell.textLabel.text = @"Step - up";
         
     }
-    //    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;

@@ -9,6 +9,13 @@
 #import "ViewController3.h"
 
 @interface ViewController3 ()
+@property (weak, nonatomic) IBOutlet UITextField *angle;
+@property (weak, nonatomic) IBOutlet UITextField *supplyvoltage;
+@property (weak, nonatomic) IBOutlet UITextField *resistance;
+@property (weak, nonatomic) IBOutlet UILabel *outputcurrent;
+@property (weak, nonatomic) IBOutlet UILabel *outputvoltage;
+- (IBAction)calculate:(id)sender;
+
 
 @end
 
@@ -24,6 +31,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 /*
 #pragma mark - Navigation
 
@@ -34,4 +43,29 @@
 }
 */
 
+- (IBAction)background:(id)sender {
+    if([self.angle isFirstResponder]){
+    [self.angle resignFirstResponder];
+}
+    if([self.supplyvoltage isFirstResponder]){
+        [self.supplyvoltage resignFirstResponder];
+    }
+    if([self.resistance isFirstResponder]){
+        [self.resistance resignFirstResponder];
+    }
+}
+- (IBAction)calculate:(id)sender {
+    float value1 = [self.angle.text floatValue];
+    float value2 = [self.supplyvoltage.text floatValue];
+    float value3 = [self.resistance.text floatValue];
+    
+    float resul3 = (value1/180);
+    float resul2 = value2 * 0.90 * cos(resul3*3.14);
+    float resul1 = resul2/value3;
+    
+    
+    self.outputcurrent.text = [NSString stringWithFormat:@"%.2f", resul1];
+    self.outputvoltage.text = [NSString stringWithFormat:@"%.2f", resul2];
+
+}
 @end

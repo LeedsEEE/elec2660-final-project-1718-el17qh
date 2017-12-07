@@ -7,6 +7,9 @@
 //
 
 #import "TableViewController3.h"
+#import "ViewController3.h"
+#import "ViewController3_3.h"
+#define viewOnSb(identifer)  [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:identifer]
 
 @interface TableViewController3 ()
 
@@ -17,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"AC-DC";
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"TableViewController3"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -32,24 +38,50 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return 2;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewController3" forIndexPath:indexPath];
     
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"Fully";
+
+    }else{
+        cell.textLabel.text = @"Half";
+
+    }
     // Configure the cell...
-    
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
-*/
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row == 0) {
+        ViewController3 * vc3 = viewOnSb(@"ViewController3");
+        [self.navigationController pushViewController:vc3 animated:YES];
+    }else{
+        ViewController3_3 * vc3_3 = viewOnSb(@"ViewController3_3");
+        [self.navigationController pushViewController:vc3_3 animated:YES];
+    }
+    
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 150;
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
